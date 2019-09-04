@@ -3,26 +3,27 @@ package Calculadora;
 import javax.swing.*;
 import Calculadora.Entrada;
 
-static double resultado = 0;
-
 public class Operacoes {
+    
+
     public static double soma(double num1, double num2) {
-        double resultado = num1 + num2;
-        return resultado;
+        return (num1 + num2);
     }
 
     public static double subtracao(double num1, double num2) {
-        double resultado = num1 - num2;
-        return resultado;
+        return (num1 - num2);
     }
 
     public static double multiplicacao(double num1, double num2) {
-        double resultado = num1 * num2;
-        return resultado;
+        return (num1 * num2);
     }
 
     public static double divisao(double num1, double num2) {
-        double resultado = num1 / num2;
-        return resultado;
+        if (num2 == 0) {
+            JOptionPane.showMessageDialog(null, "Erro!");
+            System.exit(0);
+        }
+        return (num1 / num2);
     }
 }
+
